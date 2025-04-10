@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+.game {
+  position: relative; /* Ensure child elements are positioned relative to this container */
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: white; /* Optional background color for the game container */
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  background-image: url(img/trex.png);
+  background-size: 50px 50px;
+  position: absolute; /* Position relative to the game container */
+  bottom: 0; /* Align to the bottom of the game container */
+  left: 50px; /* Adjust horizontal position */
+}
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  background-image: url(img/cactus.png);
+  background-size: 20px 40px;
+  position: absolute; /* Position relative to the game container */
+  bottom: 0; /* Align to the bottom of the game container */
+  left: 600px; /* Start position for the cactus */
+  animation: block 1.5s infinite linear; /* Ensure cactus moves */
+}
+
+#score {
+  position: absolute;
+  top: 10px; /* Position at the top of the game container */
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 50px;
+  }
+
+  50% {
+    bottom: 100px;
+  }
+
+  80% {
+    bottom: 50px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 600px;
+  }
+
+  100% {
+    left: -20px;
+  }
+}

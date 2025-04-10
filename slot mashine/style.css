@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c2c2c;
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(127deg, rgba(113, 249, 210, 0.974),  rgba(249, 113, 133, 0.974));
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #1c1c1c;
+}
+
+#slot-machine {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.reel {
+    width: 100px;
+    height: 80px;
+    margin: 0 5px;
+    background: #c0c0c0;
+    border: 2px solid #1c1c1c;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;;
+}
+
+#controls {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #222;
+    input{
+        height: 20px;
+        background-color: #e3e3e3;
+        color: #333;
+        border: none;
+        border-radius: 20px;
+        padding: 20px 5px;
+        max-width: 100px;
+    }
+}
+
+#spin-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #24997c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 250px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    border-radius: 20px;
+}
+
+#spin-button:hover {
+    background: #2cbd98;
+}
+
+#balance {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #1c1c1c;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 16px;
+    color: #000000;
+    padding: 10px;
+    border-radius: 20px;
+}
