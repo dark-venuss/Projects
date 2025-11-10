@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: #f0fff7 100%;
+    color: #3b3b3b;
+    -webkit-font-smoothing:antialiased;
+}
+.container {
+    text-align: center;
+    width: 100%;
+    padding: 18px 0;
+}
+.timer {
+    display: inline-block;
+    padding: 12px;
+    width: 600px;
+    box-sizing: border-box;
+}
+main {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    font-size: 2rem;
+    margin: 18px auto;
+    color: #ff6fa3;
+}
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.pomodoro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 2.5rem 0;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #fff6fa 0%, #fff0f3 100%);
+    box-shadow: 0 12px 30px rgba(255, 111, 163, 0.12), 0 -8px 24px rgba(168, 240, 209, 0.06);
+    border: 1px solid rgba(168,240,209,0.35);
+}
+.pomodoro::before {
+    content: "";
+    position: absolute;
+    border: 10px solid #a8f0d1;
+    border-radius: 50%;
+    width: 22rem;
+    height: 22rem;
+    box-shadow: 0 8px 20px rgba(168,240,209,0.12);
+}
+.time {
+    font-size: 5rem !important;
+    margin: 20px auto;
+    color: #ff4d96;
+    font-weight: 700;
+}
+.button {
+    background-color: #ffd6ea;
+    color: #3b3b3b;
+    border: 2px solid #a8f0d1;
+    border-radius: 12px;
+    padding: 10px 18px;
+    margin: 6px;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+    box-shadow: 0 6px 14px rgba(255,111,163,0.08);
+}
+.button.active, .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(168,240,209,0.12);
+    background-color: #ffb6d4;
+}
+.hidden {
+    display: block;
+}
+.timer-display {
+    font-size: 5rem;
+    margin-top: 20px;
+    font-weight: 800;
+}
+.buttons {
+    margin-top: 20px;
+}
+#start, #stop {
+    background-color: #ff80bf;
+    color: #ffffff;
+    border: 2px solid #9fe8c8;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all .16s ease-in;
+}
+#stop:hover {
+    background-color: #ff6b6b;
+}
+#start:hover {
+    background-color: #2ecc71;
+    color: #fff;
+    border-color: #2ecc71;
+}
+#timer-message {
+    color: #3b3b3b;
+    background-color: #ffdadf;
+    display: none;
+    padding: .5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px solid #ffd6ea;
+}
+@media screen and (min-width: 320px) and (max-width: 600px) {
+    .container {
+        transform: scale(0.95)
+    }
+    .timer {
+        width: 360px;
+    }
+    main { width: 18rem; height: 18rem; }
+    .time { font-size: 3.4rem !important; }
+}
+.button:focus, #start:focus, #stop:focus {
+    outline: 3px solid rgba(168,240,209,0.35);
+    outline-offset: 3px;
+}
+.timer-display small { display: block; font-size: .65rem; color: #8b8b8b; }
