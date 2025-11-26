@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Raw Draw</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="toolbar">
+        <div class="tool-group">
+            <button id="btn-undo" title="Undo (Ctrl+Z)" disabled>↩️</button>
+            <button id="btn-redo" title="Redo (Ctrl+Y)" disabled>↪️</button>
+            <span class="separator"></span>
+            <button id="btn-select" title="Select (V)">👆</button>
+            <button id="btn-scribble" class="active" title="Scribble (P)">✏️</button>
+            <button id="btn-arrow" title="Arrow (A)">↘️</button>
+            <button id="btn-rectangle" title="Rectangle (R)">☐</button>
+            <button id="btn-ellipse" title="Ellipse (O)">◯</button>
+            <button id="btn-text" title="Text (T)">A</button>
+            <span class="separator"></span>
+            <label class="color-picker">
+                🎨
+                <input type="color" id="inp-color" value="#1e1e1e">
+            </label>
+            <label class="stroke-width-picker" title="Stroke Width">
+                📏
+                <input type="range" id="inp-stroke-width" min="1" max="10" value="3">
+            </label>
+            <label class="file-upload" title="Insert Image">
+                🖼️
+                <input type="file" id="inp-image" accept="image/*">
+            </label>
+            <span class="separator"></span>
+            <button id="btn-export-png" title="Export as PNG">⬇️ PNG</button>
+            <button id="btn-export-svg" title="Export as SVG">⬇️ SVG</button>
+            <button id="btn-clear" title="Clear Board">🗑️</button>
+        </div>
+    </div>
+    <textarea id="text-editor" class="text-editor-hidden"></textarea>
+    <script src="src/app.js"></script>
+</body>
+</html>
